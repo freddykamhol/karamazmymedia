@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-require-imports */
 const http = require("node:http");
 
 const DEFAULT_TARGET = "https://katechnologies.de";
@@ -45,4 +45,3 @@ server.listen(port, () => {
   console.log(`Redirect server listening on :${port}`);
   console.log(`Redirect target: ${targetBase.href}`);
 });
-

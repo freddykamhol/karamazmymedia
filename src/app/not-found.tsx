@@ -1,18 +1,16 @@
-import ClientActions from "./ui/client-actions";
 import GlassShell from "./ui/glass-shell";
 
-export default function Home() {
+export default function NotFound() {
   const newUrl = "https://katechnologies.de";
 
   return (
     <GlassShell
-      badge="Neue Adresse"
-      title="Wir sind umgezogen."
+      badge="404"
+      title="Seite nicht gefunden."
       description={
         <>
-          Karam Azmy Media findest du ab sofort unter{" "}
-          <span className="font-semibold text-zinc-50">katechnologies.de</span>. Bitte
-          aktualisiere deine Lesezeichen.
+          Diese Seite gibt es hier nicht (mehr). Du findest uns jetzt unter{" "}
+          <span className="font-semibold text-zinc-50">katechnologies.de</span>.
         </>
       }
       footer={
@@ -32,21 +30,8 @@ export default function Home() {
             →
           </span>
         </a>
-
-        <ClientActions url={newUrl} />
-      </div>
-
-      <div className="mt-8 rounded-2xl border border-white/10 bg-black/20 p-4 sm:p-5">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-xs font-medium text-zinc-200">Neue Website</p>
-            <p className="mt-1 font-mono text-sm text-zinc-100">{newUrl}</p>
-          </div>
-          <p className="text-xs leading-5 text-zinc-400 sm:max-w-xs sm:text-right">
-            Tipp: Kopiere den Link oder speichere ihn als Lesezeichen.
-          </p>
-        </div>
       </div>
     </GlassShell>
   );
 }
+
